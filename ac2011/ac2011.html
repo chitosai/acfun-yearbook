@@ -1,0 +1,718 @@
+<link href="http://static.acfun.tv/ac2011/static/jquery-ui-1.8.16.custom.css" rel="stylesheet" />
+<style type="text/css">
+body{overflow:hidden;}
+h1,h2,h3,h4,h5,h6{font-weight:normal;margin:0;}
+h1{border-radius:10px 10px 0 0;font-size:30px;padding:5px 20px;}
+h1 span, h2 span{
+	color:#fff;
+	font-size:13px;
+	margin-left:10px;
+}
+h2{border-radius:10px 10px 0 0;padding:5px 20px;}
+h3{background:#6a0000;border-radius:5px;color:#fff;display:inline;font-size:14px;padding:5px 10px;}
+
+.clearfix{zoom:1;}
+.clearfix:after{display:block;content:"";clear:both;height:0;}
+#wrapper{
+	position:relative;
+	width:9999px;
+}
+#wrapper > div{
+	position:absolute;
+	left:9999px;
+	width:1000px;
+	top:0;
+	z-index:9;
+}
+
+/*=main div
+---------------------------------*/
+.block{background:#fff;border-radius:10px;float:left;width:300px;margin:8px 0;}
+.block ul{padding:10px;}
+.block li a
+{
+	color:#333;
+	font-size:12px;
+	text-decoration:none;
+}
+.block li span{color:#999;font-size:13px;float:right;}
+.sep{float:left;text-indent:-99999px;width:50px;}
+.panel{
+	background:#fff;
+	border-radius:10px;
+	margin-bottom:10px;
+}
+.panel li{
+	float:left;
+	font-size:13px;
+	list-style:none;
+	padding:10px 18px 5px;
+	width:130px;
+}
+.panel a{color:#000;}
+.panel p{color:#777;margin:0;}
+
+/*=b1 ---------------------------*/
+#b1{height:400px;}
+.histogram{
+	font-size:11px;
+	margin-left:30px;
+	width:40px;
+	padding-top:3px;
+}
+.histogram-col{
+	float:left;
+	height:100%;
+	width:10%;
+	text-align:center;
+}
+.histogram-top{background:#fff;}
+.histogram-bottom{background:#fae1e2;}
+.summary{position:absolute;right:70px;bottom:-20px;}
+.summary p{
+	background:#ffe2e4;
+	border-radius:5px;
+	font-size:13px;
+	padding:5px 10px;
+}
+.summary p:hover{background:#fff;cursor:crosshair;}
+.summary div{color:#FFE2E4;font-size:11px;text-align:right;margin:2px 0;}
+.summary div a{color:#333;}
+.summary div span{text-indent:-9999px;padding:0 2px;}
+
+/*=b2 ----------------------------*/
+ul,li{margin:0;padding:0;list-style:none;}
+#b2 {overflow:hidden;}
+#b2 div{border-radius:10px;}
+#b2 p{font-size:13px;margin:0;}
+#b2 .special{background:#DA8B1B;color:#885000;}
+
+#b2 a:hover{color:#c87100;}
+#b2 h1,#b2 h2{background:#1a568d;color:#a9ceef;}
+
+.prev,.next{
+	display:block;
+	text-indent:-9999px;
+	position:absolute;
+	left:-99px;
+	width:50px;
+	height:50px;
+	z-index:3;
+}
+.prev{background:url(http://static.acfun.tv/ac2011/static/prev.png);display:none;}
+.prev:hover{background:url(http://static.acfun.tv/ac2011/static/prev-hover.png);}
+.next{background:url(http://static.acfun.tv/ac2011/static/next.png);}
+.next:hover{background:url(http://static.acfun.tv/ac2011/static/next-hover.png);}
+#b2 .container{width:3000px;position:relative;left:0;}
+
+/*=b3 --------------------------------*/
+#b3 a{
+	display:block;
+	text-decoration:none;
+	position:absolute;
+	-moz-transition:all 0.2s linear;
+	-webkit-transition:all 0.2s linear;
+	-o-transition:all 0.2s linear;
+}
+#b3 a:hover{
+	color:#fafafa !important;
+	text-shadow:0 0 5px #fff;
+}
+#b3 p{
+	font-size:12px;
+	text-align:center;
+	margin:-5px 0 0;
+}
+
+/*=b4 ---------------------------*/
+#b4 h1,#b4 h2{background:#000;color:#f80;}
+#b4 .block a:hover{color:#7e00ff;}
+#b4 ul{border-bottom:1px solid #ccc;}
+.more
+{
+	font-size:13px;
+	padding:10px;
+}
+.more a
+{
+	color:#f30;
+    text-decoration:none;
+    margin-left:1px;
+}
+.more a:hover{color:#7e00ff;text-decoration:underline;}
+.more span{color:#777;font-size:11px;}
+
+/*=b5 ---------------------------------*/
+#b5 .container {
+	background:#fff;
+	border-radius:10px;
+	box-shadow:0 0 10px #ccc;
+	margin-bottom:20px;
+	overflow:hidden;
+	padding:20px 0;
+}
+#b5 .top-list{width:5900px;}
+#b5 .top-list > li{float:left;}
+#b5 .intro{width:200px;margin:0 20px;}
+#b5 .intro a{
+	background:#eee;
+	border-radius:5px;
+	color:#000;
+	display:block;
+	font-size:11px;
+	text-align:center;
+	text-decoration:none;
+	margin-top:5px;
+	padding:4px 0;
+}
+#b5 .intro a:hover{background:#6A0000;color:#fff;}
+#b5 .intro p{color:#6A0000;font-size:13px;}
+#b5 .intro img{border:0;padding:2px;}
+#b5 .info{padding-top:30px;width:250px;}
+#b5 .list{	
+	font-size:12px;
+}
+#b5 .list li{
+	background:#eee;
+	border-radius:5px;
+	margin-bottom:5px;
+	padding:5px 10px;
+}
+#b5 .list li.aboutAC{background:#ccc;}
+#b5 .list li:hover{
+	background:#320000;
+}
+#b5 .list a{color:#000;text-decoration:none;}
+#b5 .list li:hover,#b5 .list li:hover a{color:#fff;}
+
+.moreInfo{color:#f00;font-size:11px;font-weight:bold;float:right;}
+
+/*=nav
+---------------------------------*/
+#nav{
+	position:fixed;
+	bottom:0;
+	left:9999px;
+	z-index:10;
+}
+#nav a{
+	color:#333;
+	font-weight:bold;
+	text-decoration:none;
+	text-shadow:0 0 6px #999;
+	margin:0 5px;
+	padding:5px 10px;
+}
+</style>
+<script type="text/javascript" src="static/jquery.color.js"></script>
+<script type="text/javascript" src="static/jquery-ui-1.8.16.custom.min.js"></script>
+<script type="text/javascript" src="static/x.js"></script>
+<div id="wrapper">
+	<div id="b0">
+    	<img src="http://static.acfun.tv/ac2011/static/logo.png" />
+    </div>
+    <div id="b1">
+    	<div class="histogram-col">
+        	<div style="height:0%;"></div>
+            <div style="height:45.2%;" class="histogram histogram-top">105743</div>
+            <div style="height:54.8%;" class="histogram histogram-bottom">58036</div>
+            <h5>全站视频数</h5>
+        </div>
+        <div class="histogram-col">
+        	<div style="height:0%;"></div>
+            <div style="height:44.1%;" class="histogram histogram-top">4852829</div>
+            <div style="height:55.9%;" class="histogram histogram-bottom">2712277</div>
+            <h5>全站评论数</h5>
+        </div>
+        <div class="histogram-col">
+        	<div style="height:0%;"></div>
+            <div style="height:21.1%;" class="histogram histogram-top">249775</div>
+            <div style="height:78.9%;" class="histogram histogram-bottom">197030</div>
+            <h5>全站会员数</h5>
+        </div>
+        <div class="histogram-col">
+        	<div style="height:0%;"></div>
+            <div style="height:16%;" class="histogram histogram-top">319</div>
+            <div style="height:84%;" class="histogram histogram-bottom">269</div>
+            <h5>日均投稿量</h5>
+        </div>
+        <div class="summary">
+        	<p>2011年全站新投稿共播放 491,681,166 次</p>
+            <p>2011年全站会员共发表了 2,168,775 条评论</p>
+            <p>2011年共有新注册会员 52,745 枚</p>
+            <p>2011年全站会员共提交了 116,526 份投稿，AC娘接受了其中的 47,707 份</p>
+            <p>2011年AC娘最多时在一天内通过了 265 份投稿，时间是 12月23日
+            <p>2011年全站会员共有 ? 位会员找到了生命中的另一半</p>
+            <div>* 部分数据来源于<a href="http://124.238.214.35/acfun/" target="_blank">趋势</a>、<a href="http://acfunwiki.org" target="_blank">wiki</a></div>
+            <div><span style="background:#fff;color:#fff;">//</span>&nbsp;&nbsp;IN 2011&nbsp;&nbsp;&nbsp;&nbsp;<span style="background:#FAE1E2;">//</span>&nbsp;&nbsp;Before 2011</div>
+        </div>
+    </div>
+    <a href="javascript:void(0);" class="prev" for="#b2">//</a>
+    <div id="b2">
+        <div class="container clearfix" current="0" total="4" step="350" isSliding="false">
+        	<div class="block">
+        	    <h2 class="special">累计<span>The best of ACFUN</span></h2>
+                <ul>
+            	    <li><span>7756644</span><a href='http://acfun.tv/v/ac49890' target='_blank' title='[EVA]第三年的见异思迁'>[EVA]第三年的见异思迁</a></li>
+                    <li><span>1493507</span><a href='http://acfun.tv/v/ac144317' target='_blank' title='自恋刑警中的一般跳舞镜头'>自恋刑警中的一般跳舞镜头</a></li>
+                    <li><span>819976</span><a href='http://acfun.tv/v/ac213736' target='_blank' title='三遍以后我就忘了原版怎么唱的了。。。'>三遍以后我就忘了原版怎么唱的了。。。</a></li>
+                    <li><span>594174</span><a href='http://acfun.tv/v/ac118634' target='_blank' title='20首网友最喜欢的英文歌曲~'>20首网友最喜欢的英文歌曲~</a></li>
+                    
+                    <li><span>561306</span><a href='http://acfun.tv/v/ac23252' target='_blank' title='Happy Tree Friends'>Happy Tree Friends</a></li>
+                    <li><span>531596</span><a href='http://acfun.tv/v/ac65603' target='_blank' title='热血男儿无敌凉快'>热血男儿无敌凉快</a></li>
+                    <li><span>531150</span><a href='http://acfun.tv/v/ac39778' target='_blank' title='【世界奇妙物语系列】2011.11.28更新（修复完成，更新新P）'>【世界奇妙物语系列】2011.11.28更新</a></li>
+                    <li><span>476876</span><a href='http://acfun.tv/v/ac103056' target='_blank' title='【最新洗脑物】少女扭动中<(￣&#8704;￣)/~增员'>【最新洗脑物】少女扭动中&lt;(￣&#8704;￣)/~</a></li>
+                    <li><span>471483</span><a href='http://acfun.tv/v/ac160799' target='_blank' title='2010年Youtube十大最火视频（音乐MV除外）'>2010年Youtube十大最火视频</a></li>
+                    
+                    <li><span>465139</span><a href='http://acfun.tv/v/ac170708' target='_blank' title='【2011年ACFun春节联欢晚会】完整版'>【2011年ACFun春节联欢晚会】完整版</a></li>
+                    <li><span>459117</span><a href='http://acfun.tv/v/ac58557' target='_blank' title='金坷垃 美日非K歌金曲CD '>金坷垃 美日非K歌金曲CD </a></li>
+                    <li><span>450394</span><a href='http://acfun.tv/v/ac219707' target='_blank' title='少主换成高清来了'>少主换成高清来了</a></li>
+                    <li><span>436928</span><a href='http://acfun.tv/v/ac110426' target='_blank' title='【乱马1/2】不可不看的吐槽神作【TV+OVA全集】(修复P47视频源问题)'>【乱马1/2】不可不看的吐槽神作</a></li>
+                </ul>
+            </div>
+            <div class="sep">//</div>
+            <div class="block">
+        	    <h2>动画<span>Anime</span></h2>
+                <ul>
+            	    <li><span>202030</span><a href='http://acfun.tv/v/ac182515' target='_blank' title='【福利】工口动画20多年来的发展历史'>【福利】工口动画20多年来的发展历史</a></li>
+                    <li><span>165644</span><a href='http://acfun.tv/v/ac225163' target='_blank' title='一般动画中少女自X的场景'>一般动画中少女自X的场景</a></li>
+                    <li><span>121871</span><a href='http://acfun.tv/v/ac173442' target='_blank' title='2011受人瞩目的国产动画预告集合【10P】'>2011受人瞩目的国产动画预告集合</a></li>
+                    <li><span>118469</span><a href='http://acfun.tv/v/ac187225' target='_blank' title='猫和老鼠新的传说'>猫和老鼠新的传说</a></li>
+                    
+                    <li><span>113011</span><a href='http://acfun.tv/v/ac204991' target='_blank' title='&#9829;~ '>&#9829;~ </a></li>
+                    <li><span>112181</span><a href='http://acfun.tv/v/ac212673' target='_blank' title='【小枕头】好久没发福利了,各位不进来撸一炮么?'>【小枕头】好久没发福利了,各位不进来</a></li>
+                    <li><span>98828</span><a href='http://acfun.tv/v/ac189350' target='_blank' title='在央视动画面前银他妈弱爆了！！！'>在央视动画面前银他妈弱爆了！！！</a></li>
+                    <li><span>83571</span><a href='http://acfun.tv/v/ac207850' target='_blank' title='二次元不可能有这么萌的黑丝'>二次元不可能有这么萌的黑丝</a></li>
+                    <li><span>83511</span><a href='http://acfun.tv/v/ac175258' target='_blank' title='【男人慎入】看完这个视频你肯定硬不起来了'>【男人慎入】看完这个视频你肯定硬</a></li>
+                    <li><span>79930</span><a href='http://acfun.tv/v/ac168475' target='_blank' title='我的妹妹没那么。。。'>我的妹妹没那么。。。</a></li>
+                    
+                    <li><span>79776</span><a href='http://acfun.tv/v/ac226556' target='_blank' title='各种乱入。到底是WAR3乱入了动漫 还是。。。'>各种乱入。到底是WAR3乱入了动漫</a></li>
+                    <li><span>77049</span><a href='http://acfun.tv/v/ac174629' target='_blank' title='【俺妹】你正在想着跟我做色色的事情'>【俺妹】你正在想着跟我做色色的事情</a></li>
+                    <li><span>75026</span><a href='http://acfun.tv/v/ac202748' target='_blank' title='[MMD] 性感的麻美学姐 [重福利]'>[MMD] 性感的麻美学姐 [重福利]</a></li>
+                </ul>
+            </div>
+            <div class="sep">//</div>
+            <div class="block">
+        	    <h2>音乐<span>Music</span></h2>
+                <ul>
+            	    <li><span>213776</span><a href='http://acfun.tv/v/ac173058' target='_blank' title='一辈子撸管（女生版）'>一辈子撸管（女生版）</a></li>
+                    <li><span>200143</span><a href='http://acfun.tv/v/ac194527' target='_blank' title='【葛炮×三人组】日常的肥料【激情合唱】'>【葛炮×三人组】日常的肥料【激情合唱】</a></li>
+                    <li><span>190769</span><a href='http://acfun.tv/v/ac212621' target='_blank' title='原来我们都是听日本歌长大的'>原来我们都是听日本歌长大的</a></li>
+                    <li><span>171958</span><a href='http://acfun.tv/v/ac164639' target='_blank' title='比较有影响力的歌曲(华语歌)'>比较有影响力的歌曲(华语歌)</a></li>
+                    
+                    <li><span>145189</span><a href='http://acfun.tv/v/ac190640' target='_blank' title='过去的MC石头都是渣渣'>过去的MC石头都是渣渣</a></li>
+                    <li><span>129788</span><a href='http://acfun.tv/v/ac213230' target='_blank' title='最好听的翻唱, 我听完哭了。Backstreet Boys - I Want It That Way'>最好听的翻唱, 我听完哭了。Backstreet</a></li>
+                    <li><span>129657</span><a href='http://acfun.tv/v/ac165189' target='_blank' title='这些真的是中国大陆明星吗？？思密达！'>这些真的是中国大陆明星吗？？思密达！</a></li>
+                    <li><span>128629</span><a href='http://acfun.tv/v/ac199013' target='_blank' title='耳朵…耳朵要怀孕啦！！！'>耳朵…耳朵要怀孕啦！！！</a></li>
+                    <li><span>113389</span><a href='http://acfun.tv/v/ac215923' target='_blank' title='【葛平金曲】老男孩'>【葛平金曲】老男孩</a></li>
+                    <li><span>101167</span><a href='http://acfun.tv/v/ac222412' target='_blank' title='日本的宅都是怪物吗？'>日本的宅都是怪物吗？</a></li>
+                    
+                    <li><span>97459</span><a href='http://acfun.tv/v/ac232250' target='_blank' title='【啊射】神曲YEAH【已修复】'>【啊射】神曲YEAH【已修复】</a></li>
+                    <li><span>96813</span><a href='http://acfun.tv/v/ac201669' target='_blank' title='JUST BE GAY'>JUST BE GAY</a></li>
+                    <li><span>96669</span><a href='http://acfun.tv/v/ac266611' target='_blank' title='【中文翻唱】人民的千本樱-千本共'>【中文翻唱】人民的千本樱-千本共</a></li>
+                </ul>
+            </div>
+            <div class="sep">//</div>
+            <div class="block">
+        	    <h2>游戏<span>Games</span></h2>
+                <ul>
+            	    <li><span>191140</span><a href='http://acfun.tv/v/ac177645' target='_blank' title='【在线多人游戏】大家一起玩软妹小老鼠'>【在线多人游戏】大家一起玩软妹小老鼠</a></li>
+                    <li><span>188829</span><a href='http://acfun.tv/v/ac166208' target='_blank' title='【热血感动】新灌籃高手精采大結局'>【热血感动】新灌籃高手精采大結局</a></li>
+                    <li><span>162811</span><a href='http://acfun.tv/v/ac229087' target='_blank' title='《大灾变》吉尔尼斯之战'>《大灾变》吉尔尼斯之战</a></li>
+                    <li><span>149418</span><a href='http://acfun.tv/v/ac178520' target='_blank' title='【过去鼠标点击的方式弱爆了！】'>【过去鼠标点击的方式弱爆了！】</a></li>
+                    
+                    <li><span>148345</span><a href='http://acfun.tv/v/ac184682' target='_blank' title='更新护士妹子等【神吐槽】过去的那些游戏配音都弱爆了！'>更新护士妹子等【神吐槽】过去的那些</a></li>
+                    <li><span>103534</span><a href='http://acfun.tv/v/ac174423' target='_blank' title='DNF再次登上CCTV'>DNF再次登上CCTV</a></li>
+                    <li><span>103478</span><a href='http://acfun.tv/v/ac182879' target='_blank' title='过去网游角色换装的方式弱爆了！'>过去网游角色换装的方式弱爆了！</a></li>
+                    <li><span>87578</span><a href='http://acfun.tv/v/ac182803' target='_blank' title='(四)特色的必杀技和连续技们赏析'>(四)特色的必杀技和连续技们赏析</a></li>
+                    <li><span>87316</span><a href='http://acfun.tv/v/ac198483' target='_blank' title='山口山最令人反感的10件事情'>山口山最令人反感的10件事情</a></li>
+                    <li><span>86771</span><a href='http://acfun.tv/v/ac216519' target='_blank' title='【怀旧】过去的游戏内涵爆了！'>【怀旧】过去的游戏内涵爆了！</a></li>
+                    
+                    <li><span>80539</span><a href='http://acfun.tv/v/ac170333' target='_blank' title='【高清】《漫画英雄对卡普空3》偷跑动画×4'>【高清】《漫画英雄对卡普空3》偷跑动画</a></li>
+                    <li><span>79017</span><a href='http://acfun.tv/v/ac200334' target='_blank' title='(六)特色的重口味的终结技们赏析'>(六)特色的重口味的终结技们赏析</a></li>
+                    <li><span>78464</span><a href='http://acfun.tv/v/ac189269' target='_blank' title='星际2终极微操(更新P3)'>星际2终极微操(更新P3)</a></li>
+                </ul>
+            </div>
+            <div class="sep">//</div>
+            <div class="block">
+        	    <h2>娱乐<span>Entertainment</span></h2>
+                <ul>
+            	    <li><span>819976</span><a href='http://acfun.tv/v/ac213736' target='_blank' title='三遍以后我就忘了原版怎么唱的了。。。'>三遍以后我就忘了原版怎么唱的了。。。</a></li>
+                    <li><span>465139</span><a href='http://acfun.tv/v/ac170708' target='_blank' title='【2011年ACFun春节联欢晚会】完整版'>【2011年ACFun春节联欢晚会】完整版</a></li>
+                    <li><span>413819</span><a href='http://acfun.tv/v/ac169595' target='_blank' title='【略娘】NyaNyaNya【54P】'>【略娘】NyaNyaNya【54P】</a></li>
+                    <li><span>325497</span><a href='http://acfun.tv/v/ac186700' target='_blank' title='【葛平金曲】循环（完整版）'>【葛平金曲】循环（完整版）</a></li>
+                    
+                    <li><span>307322</span><a href='http://acfun.tv/v/ac184929' target='_blank' title='过去的DJ简直弱爆了! 大丈夫萌大奶？'>过去的DJ简直弱爆了! 大丈夫萌大奶？</a></li>
+                    <li><span>304513</span><a href='http://acfun.tv/v/ac228536' target='_blank' title='老毛子威武，以前的航模弱爆了'>老毛子威武，以前的航模弱爆了</a></li>
+                    <li><span>299830</span><a href='http://acfun.tv/v/ac175832' target='_blank' title='【现场】热血男儿无敌凉快'>【现场】热血男儿无敌凉快</a></li>
+                    <li><span>297727</span><a href='http://acfun.tv/v/ac194805' target='_blank' title='喂喂，你的小裤裤里面塞的是什么啊！香蕉么~'>喂喂，你的小裤裤里面塞的是什么啊!</a></li>
+                    <li><span>293458</span><a href='http://acfun.tv/v/ac189604' target='_blank' title='MC石头..石头哥又来了、、、'>MC石头..石头哥又来了、、、</a></li>
+                    <li><span>251358</span><a href='http://acfun.tv/v/ac171907' target='_blank' title='过去唱自由飞翔的方式 弱爆了！'>过去唱自由飞翔的方式 弱爆了！</a></li>
+                    
+                    <li><span>248773</span><a href='http://acfun.tv/v/ac169974' target='_blank' title='【更新14P】【神字幕整合】纪念曾经的神字幕君'>【更新14P】【神字幕整合】纪念曾经的</a></li>
+                    <li><span>234922</span><a href='http://acfun.tv/v/ac190692' target='_blank' title='【AV18+】各种天朝广告【慎入】'>【AV18+】各种天朝广告【慎入】</a></li>
+                    <li><span>218948</span><a href='http://acfun.tv/v/ac171675' target='_blank' title='2011超级碗广告选集'>2011超级碗广告选集</a></li>
+                </ul>
+            </div>
+            <div class="sep">//</div>
+            <div class="block">
+        	    <h2>短影<span>Short videos</span></h2>
+                <ul>
+            	    <li><span>450394</span><a href='http://acfun.tv/v/ac219707' target='_blank' title='少主换成高清来了'>少主换成高清来了</a></li>
+                    <li><span>205546</span><a href='http://acfun.tv/v/ac183730' target='_blank' title='【无鬼畜】元首终于肯说RAP了'>【无鬼畜】元首终于肯说RAP了</a></li>
+                    <li><span>171820</span><a href='http://acfun.tv/v/ac193934' target='_blank' title='不管你看得起看不起我，我都是一个演员'>不管你看得起看不起我，我都是一个演员</a></li>
+                    <li><span>167837</span><a href='http://acfun.tv/v/ac166048' target='_blank' title='We Will Rock You多版本，一P比一P给力'>We Will Rock You多版本，一P比一P给力</a></li>
+                    
+                    <li><span>127030</span><a href='http://acfun.tv/v/ac216319' target='_blank' title='如果都是这种标准的话，我死都不会坐飞机'>如果都是这种标准的话，我死都不会坐飞机</a></li>
+                    <li><span>104186</span><a href='http://acfun.tv/v/ac231886' target='_blank' title='大家来看看装逼的新后果~'>大家来看看装逼的新后果~</a></li>
+                    <li><span>102899</span><a href='http://acfun.tv/v/ac167819' target='_blank' title='[猎奇神记录片]1000种死法 01'>[猎奇神记录片]1000种死法 01</a></li>
+                    <li><span>100566</span><a href='http://acfun.tv/v/ac229097' target='_blank' title='【女生宿舍】来，战个痛快'>【女生宿舍】来，战个痛快</a></li>
+                    <li><span>99506</span><a href='http://acfun.tv/v/ac215104' target='_blank' title='吴宗宪部分黄段子锦集'>吴宗宪部分黄段子锦集</a></li>
+                    <li><span>96691</span><a href='http://acfun.tv/v/ac205068' target='_blank' title='非诚勿扰-一上来就全灭的男嘉宾'>非诚勿扰-一上来就全灭的男嘉宾</a></li>
+                    
+                    <li><span>96060</span><a href='http://acfun.tv/v/ac237293' target='_blank' title='【福利向】水手服，胖次，真空'>【福利向】水手服，胖次，真空</a></li>
+                    <li><span>95446</span><a href='http://acfun.tv/v/ac171417' target='_blank' title='6岁天才女优 世界是萝莉的'>6岁天才女优 世界是萝莉的</a></li>
+                    <li><span>94920</span><a href='http://acfun.tv/v/ac236138' target='_blank' title='谦哥上纲哥和孟非主持的《非常了得》 搞笑了'>谦哥上纲哥和孟非主持的《非常了得》 </a></li>
+                </ul>
+            </div>
+            <div class="sep">//</div>
+            <div class="block">
+        	    <h2>文章<span>Articles</span></h2>
+                <ul>
+            	    <li><span>232020</span><a href='http://acfun.tv/v/ac196884' target='_blank' title='小时候宠弟弟,想把他含在嘴里,现在他大了,只能把他的一部分含在嘴里'>小时候宠弟弟,想把他含在嘴里,现在他大了</a></li>
+                    <li><span>183125</span><a href='http://acfun.tv/v/ac173173' target='_blank' title='我忍不住了！新月冰冰！我愛你'>我忍不住了！新月冰冰！我愛你</a></li>
+                    <li><span>142688</span><a href='http://acfun.tv/v/ac246483' target='_blank' title='这尼玛的人生赢家啊！！有木有！！我的萝莉啊'>这尼玛的人生赢家啊！！有木有！！</a></li>
+                    <li><span>132179</span><a href='http://acfun.tv/v/ac268439' target='_blank' title='你问我答，WOW G M的七个为什么【点击量超过10W，我连吃黑木耳十条胖次】'>你问我答，WOW G M的七个为什么</a></li>
+                    
+                    <li><span>117351</span><a href='http://acfun.tv/v/ac276033' target='_blank' title='【转载】爱动漫,做过声优,体重90斤(10斤是胸)的软妹征友'>【转载】爱动漫,做过声优,体重90斤</a></li>
+                    <li><span>108784</span><a href='http://acfun.tv/v/ac188474' target='_blank' title='"龅牙哥"坠楼自杀，父母将向法院提起诉讼。'>"龅牙哥"坠楼自杀，父母将向法院提起</a></li>
+                    <li><span>101305</span><a href='http://acfun.tv/v/ac230137' target='_blank' title='百度伪娘吧又来了一个神级伪娘'>百度伪娘吧又来了一个神级伪娘</a></li>
+                    <li><span>96089</span><a href='http://acfun.tv/v/ac229100' target='_blank' title='迅雷7跨时代的巅峰新功能···【原来找资源的方式都弱爆了！】'>迅雷7跨时代的巅峰新功能···</a></li>
+                    <li><span>95903</span><a href='http://acfun.tv/v/ac198647' target='_blank' title='这张图我不说,你肯定看不懂'>这张图我不说,你肯定看不懂</a></li>
+                    <li><span>94304</span><a href='http://acfun.tv/v/ac170012' target='_blank' title='以前结婚的方式     弱爆了!!!!!!'>以前结婚的方式     弱爆了!!!!!!</a></li>
+                    
+                    <li><span>94287</span><a href='http://acfun.tv/v/ac203941' target='_blank' title='冠蜥哥还是赢了,我再也不相信爱情了!!!'>冠蜥哥还是赢了,我再也不相信爱情了!!!</a></li>
+                    <li><span>93834</span><a href='http://acfun.tv/v/ac174218' target='_blank' title='真人版充气娃娃惊现祖国大陆'>真人版充气娃娃惊现祖国大陆</a></li>
+                    <li><span>92998</span><a href='http://acfun.tv/v/ac211153' target='_blank' title='各地人民心目中的中国地图！~~'>各地人民心目中的中国地图！~~</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <a href="javascript:void(0);" class="next" for="#b2">//</a>
+    <div id="b3">
+        <a href="http://s.acfun.tv/Search.aspx?q=%E4%B8%9C%E6%96%B9&order=b597c70a-68d7-46de-bd39-81a2bd035fc3&group=-1" style="top:-50px;left:400px;color:#fff;font-size:80px;" target="_blank">东方<p>+1574</p></a>
+        <a href="http://s.acfun.tv/Search.aspx?q=mugen&order=b597c70a-68d7-46de-bd39-81a2bd035fc3&group=-1" style="top:-120px;left:440px;color:#170f68;font-size:60px;" target="_blank">MUGEN<p>+1347</p></a>
+        <a href="http://s.acfun.tv/Search.aspx?q=vocaloid&order=b597c70a-68d7-46de-bd39-81a2bd035fc3&group=-1" style="top:-40px;left:150px;color:#eac;font-size:57px;" target="_blank">vocaloid<p>+1133</p></a>
+        <a href="http://s.acfun.tv/Search.aspx?q=akb&order=b597c70a-68d7-46de-bd39-81a2bd035fc3&group=-1" style="top:-30px;left:560px;color:#FF8E00;font-size:60px;" target="_blank">AKB<p>+849</p></a>
+        <a href="http://s.acfun.tv/Search.aspx?q=%E5%88%9D%E9%9F%B3%E3%83%9F%E3%82%AF&order=b597c70a-68d7-46de-bd39-81a2bd035fc3&group=-1" style="top:-20px;left:670px;color:#401400;font-size:30px;" target="_blank">初音ミク<p>+656</p></a>
+        <a href="http://s.acfun.tv/Search.aspx?q=MAD&order=b597c70a-68d7-46de-bd39-81a2bd035fc3&group=-1" style="top:-100px;left:330px;color:#540c0c;font-size:44px;" target="_blank">MAD<p>+581</p></a>
+        <a href="http://s.acfun.tv/Search.aspx?q=%E6%AD%8C%E3%81%A3%E3%81%A6%E3%81%BF%E3%81%9F&order=b597c70a-68d7-46de-bd39-81a2bd035fc3&group=-1" style="top:30px;left:210px;color:#009E8D;font-size:44px;" target="_blank">歌ってみた<p>+552</p></a>
+        <a href="http://s.acfun.tv/Search.aspx?q=%E6%B8%B8%E6%88%8F&order=b597c70a-68d7-46de-bd39-81a2bd035fc3&group=-1" style="top:60px;left:430px;color:#FEF000;font-size:48px;" target="_blank">游戏<p>+537</p></a>
+        <a href="http://s.acfun.tv/Search.aspx?q=AMV&order=b597c70a-68d7-46de-bd39-81a2bd035fc3&group=-1" style="top:50px;left:530px;color:#0ea;font-size:34px;" target="_blank">AMV<p>+536</p></a>
+        <a href="http://s.acfun.tv/Search.aspx?q=%E6%90%9E%E7%AC%91&order=b597c70a-68d7-46de-bd39-81a2bd035fc3&group=-1" style="top:-150px;left:490px;color:#aaa;font-size:30px;" target="_blank">搞笑<p>+524</p></a>
+        <a href="http://s.acfun.tv/Search.aspx?q=KOF&order=b597c70a-68d7-46de-bd39-81a2bd035fc3&group=-1" style="top:-90px;left:280px;color:#bbb620;font-size:25px;" target="_blank">KOF<p>+503</p></a>
+        <a href="http://s.acfun.tv/Search.aspx?q=%E7%BF%BB%E5%94%B1&order=b597c70a-68d7-46de-bd39-81a2bd035fc3&group=-1" style="top:-130px;left:300px;color:#ae79c9;font-size:26px;" target="_blank">翻唱<p>+495</p></a>
+        <a href="http://s.acfun.tv/Search.aspx?q=%E6%A0%BC%E6%96%97&order=b597c70a-68d7-46de-bd39-81a2bd035fc3&group=-1" style="top:80px;left:360px;color:#372894;font-size:30px;" target="_blank">格斗<p>+436</p></a>
+        <a href="http://s.acfun.tv/Search.aspx?q=FTG&order=b597c70a-68d7-46de-bd39-81a2bd035fc3&group=-1" style="top:120px;left:430px;color:#aaa;font-size:26px;" target="_blank">FTG<p>+398</p></a>
+        <a href="http://s.acfun.tv/Search.aspx?q=%E7%BE%8E%E5%89%A7&order=b597c70a-68d7-46de-bd39-81a2bd035fc3&group=-1" style="top:-70px;left:680px;color:#00C80D;font-size:30px;" target="_blank">美剧<p>+355</p></a>
+        <a href="http://s.acfun.tv/Search.aspx?q=DOTA&order=b597c70a-68d7-46de-bd39-81a2bd035fc3&group=-1" style="top:-10px;left:790px;color:#ffb6dc;font-size:26px;" target="_blank">DOTA<p>+353</p></a>
+        <a href="http://s.acfun.tv/Search.aspx?q=%E5%85%84%E8%B4%B5&order=b597c70a-68d7-46de-bd39-81a2bd035fc3&group=-1" style="top:30px;left:630px;color:#222;font-size:50px;" target="_blank">兄贵<p>+335</p></a>
+        <a href="http://s.acfun.tv/Search.aspx?q=MMD&order=b597c70a-68d7-46de-bd39-81a2bd035fc3&group=-1" style="top:-140px;left:560px;color:#000;font-size:20px;" target="_blank">MMD<p>+318</p></a>
+        <a href="http://s.acfun.tv/Search.aspx?q=%E5%85%83%E9%A6%96&order=b597c70a-68d7-46de-bd39-81a2bd035fc3&group=-1" style="top:-60px;left:590px;color:#28031e;font-size:24px;" target="_blank">元首<p>+318</p></a>
+        <a href="http://s.acfun.tv/Search.aspx?q=%E6%96%B0%E7%95%AA&order=b597c70a-68d7-46de-bd39-81a2bd035fc3&group=-1" style="top:90px;left:590px;color:#b4895a;font-size:30px;" target="_blank">新番<p>+316</p></a>
+    </div>
+    <div id="b4">
+        <div class="panel">
+        	<h1>人气赛高<span>Best UPs of 2011</span></h1>
+            <ul class="clearfix">
+            	<li>
+                	<img src="http://static.acfun.tv/ac2011/static/up-1.jpg" />
+                    <p><a href="http://www.acfun.tv/api/getuserinfo.php?mid=97546" target="_blank">pachincko</a></p>
+                    <p class="hits">Hits : 28456648</p>
+                </li>
+                <li>
+                	<img src="http://static.acfun.tv/ac2011/static/up-2.jpg" />
+                    <p><a href="http://www.acfun.tv/api/getuserinfo.php?mid=91048" target="_blank">宇宙鱼</a></p>
+                    <p class="hits">Hits : 8367165</p>
+                </li>
+                <li>
+                	<img src="http://static.acfun.tv/ac2011/static/up-3.jpg" />
+                    <p><a href="http://www.acfun.tv/api/getuserinfo.php?mid=119279" target="_blank">结野晴明</a></p>
+                    <p class="hits">Hits : 5027193</p>
+                </li>
+                <li>
+                	<img src="http://static.acfun.tv/ac2011/static/up-4.jpg" />
+                    <p><a href="http://www.acfun.tv/api/getuserinfo.php?mid=21636" target="_blank">天花板上吊着猫</a></p>
+                    <p class="hits">Hits : 4559838</p>
+                </li>
+                <li>
+                	<img src="http://static.acfun.tv/ac2011/static/up-5.jpg" />
+                    <p><a href="http://www.acfun.tv/api/getuserinfo.php?mid=196563" target="_blank">芜杆迁黄</a></p>
+                    <p class="hits">Hits : 4358102</p>
+                </li>
+                <li>
+                	<img src="http://static.acfun.tv/ac2011/static/up-6.jpg" />
+                    <p><a href="http://www.acfun.tv/api/getuserinfo.php?mid=226580" target="_blank">没真相你发个黄瓜</a></p>
+                    <p class="hits">Hits : 3732801</p>
+                </li>
+            </ul>
+            <div class="more">
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=181184" target="_blank">佧佧银</a><span>(+3745266)</span>/
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=82840" target="_blank">面档老板</a><span>(+3327880)</span>/
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=200165" target="_blank">2012.12.21</a><span>(+3324384)</span>/
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=56647" target="_blank">東方餡掛炒飯</a><span>(+3264396)</span>/
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=39876" target="_blank">无聊的夜</a><span>(+2848256)</span>/
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=200359" target="_blank">leander</a><span>(+2772520)</span>/
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=125616" target="_blank">17.8cm</a><span>(+2676520)</span>/
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=200212" target="_blank">哇嘎啦耐</a><span>(+2515508)</span>/
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=1727" target="_blank">爱情轻骑兵</a><span>(+2400571)</span>/
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=40107" target="_blank">9550pro</a><span>(+2223392)</span>/
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=23447" target="_blank">小路</a><span>(+2197246)</span>/
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=200869" target="_blank">爱麻花疼，爱AC娘，也爱</a><span>(+2158678)</span>/
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=172255" target="_blank">任天堂xsony</a><span>(+2043499)</span>/
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=206058" target="_blank">坑爹呢这是！</a><span>(+2004331)</span>
+            </div>
+        </div>
+        <div class="block">
+        	<h2>投稿最多<span>Most active UPs</span></h2>
+            <div class="more">
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=97546" target="_blank">pachincko</a><span>(+1645)</span>/
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=58769" target="_blank">疾风小战</a><span>(+925)</span>/
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=200359" target="_blank">leander</a><span>(+810)</span>/
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=46496" target="_blank">雪月华</a><span>(+722)</span>/
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=181184" target="_blank">佧佧银</a><span>(+704)</span>/
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=91048" target="_blank">宇宙鱼</a><span>(+664)</span>/
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=117335" target="_blank">我是BCZ</a><span>(+627)</span>/
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=39876" target="_blank">无聊的夜</a><span>(+627)</span>/
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=21636" target="_blank">天花板上吊着猫</a><span>(+461)</span>/
+                <a href="#">ヘンタイ⑨コン</a><span>(+454)</span>
+            </div>
+        </div>
+        <div class="sep">//</div>
+        <div class="block">
+        	<h2>评论最多<span>Received most replys</span></h2>
+            <div class="more">
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=97546" target="_blank">pachincko</a><span>(+66168)</span>/
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=91048" target="_blank">宇宙鱼</a><span>(+20665)</span>/
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=21636" target="_blank">天花板上吊着猫</a><span>(+18545)</span>/
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=56647" target="_blank">東方餡掛炒飯</a><span>(+16883)</span>/
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=181184" target="_blank">佧佧银</a><span>(+16020)</span>/
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=200359" target="_blank">leander</a><span>(+14978)</span>/
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=117335" target="_blank">我是BCZ</a><span>(+14561)</span>/
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=172255" target="_blank">任天堂xsony</a><span>(+14233)</span>/
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=196563" target="_blank">芜杆迁黄</a><span>(+13761)</span>/
+            </div>
+        </div>
+        <div class="sep">//</div>
+        <div class="block">
+        	<h2>被收藏最多<span>Favorites of AC</span></h2>
+            <div class="more">
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=97546" target="_blank">pachincko</a><span>(+17698)</span>/
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=39876" target="_blank">无聊的夜</a><span>(+11138)</span>/
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=91048" target="_blank">宇宙鱼</a><span>(+10602)</span>/
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=21636" target="_blank">天花板上吊着猫</a><span>(+9284)</span>/
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=200165" target="_blank">2012.12.21</a><span>(+8700)</span>/
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=119279" target="_blank">结野晴明</a><span>(+8020)</span>/
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=196563" target="_blank">芜杆迁黄</a><span>(+7628)</span>/
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=200359" target="_blank">leander</a><span>(+7168)</span>/
+                <a href="http://www.acfun.tv/api/getuserinfo.php?mid=181184" target="_blank">佧佧银</a><span>(+6433)</span>
+            </div>
+        </div>
+    </div>
+    <div id="b5">
+    	<div class="container">
+            <ul class="top-list clearfix">
+                <li class="intro">
+                    <h3>Jan 2011</h3>
+                    <p>2011年伊始，acfun新技术管理员majia255开始频繁出现在贴吧，停滞了多年的ac升级也终于重新开始。</p>
+                </li>
+                <li class="info">
+                	<ul class="list">
+                    	<li class="aboutAC">新管理员majia出现</li>
+                        <li class="aboutAC"><a href="http://www.acfun.tv/v/ac164411/" target="_blank">2010全年统计</a></li>
+                        <li><a href="http://www.acfun.tv/v/ac167203/" target="_blank">过去的...弱爆了</a></li>
+                        <li><a href="http://www.acfun.tv/v/ac169595/" target="_blank"><span class="moreInfo">41W点击！</span>nyan cat合集</a></li>
+                        <li><a href="http://www.acfun.tv/v/ac170115/" target="_blank"><span class="moreInfo">经典</span>牢不可破的金坷垃:金色十月</a></li>
+                    </ul>
+                </li>
+                <li class="intro">
+                    <h3>Feb 2011</h3>
+                    <p>今年的春晚也不平静，奈奈的一曲“AC娘的消失”竟引出口水一片，天下喷子过年也不回家休息休息？冰爷在这个月突然就——火了！虽然冰爷一直很萌啦，但那个帖子被顶成那样子究竟是要闹哪样啊w</p>
+                </li>
+                <li class="info">
+                	<ul class="list">
+                    	<li class="aboutAC">AC大家族关闭</li>
+                        <li class="aboutAC"><a href="http://www.acfun.tv/v/ac170708/" target="_blank">2011年ACFun春节联欢晚会</a></li>
+                        <li><a href="http://www.acfun.tv/v/ac170759/" target="_blank"><span class="moreInfo">诀别？怀念？</span>AC娘的消失</a></li>
+                        <li><a href="http://www.acfun.tv/v/ac170934/" target="_blank">【贺岁片】蛋疼新闻</a></li>
+                        <li><a href="http://www.acfun.tv/v/ac173058/" target="_blank">一辈子撸管</a></li>
+                        <li><a href="http://www.acfun.tv/v/ac173173/" target="_blank"><span class="moreInfo">w</span>我忍不住了！新月冰冰！我愛你</a></li>
+                    </ul>
+                </li>
+                <li class="intro">
+                    <h3>Mar 2011</h3>
+                    <p>首先为在大地震中失去生命的日本友人默哀。其次，人民群众第一次意识到，艹6才是伟大又英勇的中国人民唯一不会开战的地方。</p>
+                </li>
+                <li class="info">
+                	<ul class="list">
+                    	<li><a href="http://www.acfun.tv/v/ac180085/" target="_blank"><span class="moreInfo">战！</span>日本大地震</a></li>
+                        <li><a href="http://www.acfun.tv/v/ac180113/" target="_blank"><span class="moreInfo">战！</span>我替"庆祝日本地震"的中国网民向日本人民道歉 </a></li>
+                        <li><a href="http://www.acfun.tv/v/ac180139/" target="_blank"><span class="moreInfo">战！</span>日本地震时网友自拍</a></li>
+                        <li><a href="http://www.acfun.tv/v/ac181061/" target="_blank"><span class="moreInfo">战！</span>日本地震前30秒预警</a></li>
+                        <li><a href="http://www.acfun.tv/v/ac182831/" target="_blank"><span class="moreInfo">战！</span>有感而发 中国的网络上只有7个人</a></li>
+                        <li><a href="http://www.acfun.tv/v/ac182899/" target="_blank"><span class="moreInfo">战！</span>智商的下限果然不可轻易探求</a></li>
+                        <li><a href="http://www.acfun.tv/v/ac180732/" target="_blank"><span class="moreInfo">1024</span>波姐归来了！</a></li>
+                    </ul>
+                </li>
+                <li class="intro">
+                    <h3>Apr 2011</h3>
+                    <p>龅牙哥因为不堪忍受<del>VAN</del>网友的压力<del>被卖给路西法</del>自杀了。诶，这么巧，还真有人重发了YOOOOO之源头？</p>
+                </li>
+                <li class="info">
+                	<ul class="list">
+                    	<li class="aboutAC">番剧区开放免审权限</li>
+                    	<li><a href="http://www.acfun.tv/v/ac188474/" target="_blank">龅牙哥自杀了</a></li>
+                        <li><a href="http://www.acfun.tv/v/ac190191/" target="_blank"><span class="moreInfo">怀旧</span>ACFUN专业等级考试!</a></li>
+                        <li><a href="http://www.acfun.tv/v/ac192948/" target="_blank"><span class="moreInfo">YOO</span>Don't watch an anime named BOKU!!</a></li>
+                    </ul>
+                </li>
+                <li class="intro">
+                    <h3>May 2011</h3>
+                    <p>ACFUN投稿数过20W，我谨代表党中央、国务院、中央军委、全国各族人民发来贺电。话说这个毕业季，大家都不约而同地戴上了五道杠啊 =A=</p>
+                </li>
+                <li class="info">
+                	<ul class="list">
+                    	<li class="aboutAC"><a href="http://www.acfun.tv/v/ac200000/" target="_blank"><span class="moreInfo">我们的20W！</span>66人大合唱，AC一直在~</a></li>
+                    	<li><a href="http://www.acfun.tv/v/ac196659/" target="_blank">一曲忠诚的赞歌</a></li>
+                        <li><a href="http://www.acfun.tv/v/ac197379/" target="_blank">五道杠少年</a></li>
+                        <li><a href="http://www.acfun.tv/v/ac199299/" target="_blank">国产军事FPS游戏《光荣使命》</a></li>
+                    </ul>
+                </li>
+                <li class="intro">
+                    <h3>Jun 2011</h3>
+                    <p>除了老虚，炎亚纶也表示我好好躺着怎么也中枪了！什么小炎，跟我有毛线关系呀！哼，不理你们了！
+                    <a href="http://static.acfun.tv/ac2011/static/v1.jpg" target="_blank"><img src="http://static.acfun.tv/ac2011/static/v1-thumbnail.jpg" />第一个测试界面完成</a></p>
+                </li>
+                <li class="info">
+                	<ul class="list">
+                    	<li class="aboutAC"><a href="http://s.acfun.tv/" target="_blank">新搜索上线</a></li>
+                    	<li><a href="http://www.acfun.tv/v/ac205775/" target="_blank"><span class="moreInfo">经典</span>牢不可破的金坷垃:狂热年代</a></li>
+                        <li><a href="http://www.acfun.tv/v/ac206302/" target="_blank"><span class="moreInfo">小炎</span>高考命题老虚中枪</a></li>
+                        <li><a href="http://www.acfun.tv/v/ac206909/" target="_blank">侵略！河北省</a></li>
+                        <li><a href="http://www.acfun.tv/v/ac208019/" target="_blank">以前的男人抢婚方式弱爆了</a></li>
+                        <li><a href="http://www.acfun.tv/v/ac208168/" target="_blank"><span class="moreInfo">战！</span>sorry sorry</a></li>
+                        <li><a href="http://www.acfun.tv/v/ac212654/" target="_blank">过去的领导视察弱爆了</a></li>
+                    </ul>
+                </li>
+                <li class="intro">
+                    <h3>Jul 2011</h3>
+                    <p>为在7·23动车事故中遇难的40位无辜群众默哀。连把乘客安全送到目的地都做不到的和谐号，居然还想学新干线变身拯救世界。至于你信不信，反正我是不信！
+                    <a href="http://static.acfun.tv/ac2011/static/v2.png" target="_blank"><img src="http://static.acfun.tv/ac2011/static/v2-thumbnail.png" />第二个测试界面完成</a></p>
+                </li>
+                <li class="info">
+                	<ul class="list">
+                    	<li class="aboutAC">新管理员lurnar1992出现</li>
+                        <li class="aboutAC"><a href="http://tieba.baidu.com/f?kz=1126064723" target="_blank">域名更换为acfun.tv</a></li>
+                        <li class="aboutAC">番区恢复封面、使用新界面</li>
+                        <li><a href="http://www.acfun.tv/v/ac218464/" target="_blank"><span class="moreInfo">天雷滚滚</span>高铁侠</a></li>
+                        <li><a href="http://www.acfun.tv/v/ac218380/" target="_blank">7.15葛平长沙见面会完整版</a></li>
+                        <li><a href="http://www.acfun.tv/v/ac218550/" target="_blank"><span class="moreInfo">战！</span>7·23动车事故</a></li>
+                        <li><a href="http://www.acfun.tv/v/ac219707/" target="_blank">少主换成高清来了</a></li>
+                    </ul>
+                </li>
+                <li class="intro">
+                    <h3>Aug 2011</h3>
+                    <p>AC第一次对评论做出限制，似乎是因为AC娘的口气太卖萌的缘故同学们纷纷表示AC娘你是要闹哪样w 其实AC娘哪样都要闹~
+                    <a href="http://static.acfun.tv/ac2011/static/v3.png" target="_blank"><img src="http://static.acfun.tv/ac2011/static/v3-thumbnail.png" />第三个测试界面完成</a></p>
+                </li>
+                <li class="info">
+                	<ul class="list">
+                    	<li class="aboutAC"><a href="http://www.acfun.tv/v/ac225370/" target="_blank"><span class="moreInfo">请打10086</span>AC开始管理评论内容</a></li>
+                        <li class="aboutAC">AC服务器调整，视频大面积缓冲，评论大量出现“回复可见”</li>
+                        <li><a href="http://www.acfun.tv/v/ac225856/" target="_blank">还记得大明湖畔的伊藤野悠吗？</a></li>
+                        <li><a href="http://www.acfun.tv/v/ac227067/" target="_blank">爱拍网抄袭事件</a></li>
+                        <li><a href="http://www.acfun.tv/v/ac229100/" target="_blank">迅雷邻居登场</a></li>
+                        <li><a href="http://www.acfun.tv/v/ac229938/" target="_blank"><span class="moreInfo">我hold不住了</span>hold住姐</a></li>
+                        <li><a href="http://www.acfun.tv/v/ac232999/" target="_blank">前略，在天国的爷爷，你的遗物……</a></li>
+                        <li><a href="http://www.acfun.tv/v/ac234402/" target="_blank">阿宅上非诚勿扰</a></li>
+                    </ul>
+                </li>
+                <li class="intro">
+                    <h3>Sep 2011</h3>
+                    <p>重磅推荐组曲ACFUN喔！为什么没有有爱的技术宅来翻唱呢 >< 从今天起，世界就由我们大千本樱帝国来统治！</p>
+                </li>
+                <li class="info">
+                	<ul class="list">
+                    	<li><a href="http://www.acfun.tv/v/ac238833/" target="_blank"><span class="moreInfo">推荐</span>组曲ACFUN</a></li>
+                        <li><a href="http://www.acfun.tv/v/ac238366/" target="_blank">女生宿舍楼后的手枪哥</a></li>
+                        <li><a href="http://www.acfun.tv/v/ac241985/" target="_blank"><span class="moreInfo">毫无福利</span>裸</a></li>
+                        <li><a href="http://www.acfun.tv/v/ac245568/" target="_blank">地窖性奴案</a></li>
+                        <li><a href="http://www.acfun.tv/v/ac241795/" target="_blank"><span class="moreInfo">满眼尽千本</span>千本樱</a></li>
+                    </ul>
+                </li>
+                <li class="intro">
+                    <h3>Oct 2011</h3>
+                    <p>民国百年，我们的百年。然而……果然又战起来了！
+                    <a href="http://static.acfun.tv/ac2011/static/v4.jpg" target="_blank"><img src="http://static.acfun.tv/ac2011/static/v4-thumbnail.png" />手机版测试界面</a></p>
+                </li>
+                <li class="info">
+                	<ul class="list">
+                    	<li class="aboutAC"><a href="http://tieba.baidu.com/p/1233463067" target="_blank">用户数据基本转移完成</a></li>
+                    	<li class="aboutAC"><a href="http://www.acfun.tv/v/ac248773/" target="_blank">准备更换新系统，由于种种原因推迟</a></li>
+                        <li><a href="http://www.acfun.tv/v/ac249435/" target="_blank"><span class="moreInfo">战！</span>中华萌国传</a></li>
+                        <li><a href="http://www.acfun.tv/v/ac249948/" target="_blank"><span class="moreInfo">战！</span>民国百年阅兵</a></li>
+                        <li><a href="http://www.acfun.tv/v/ac250758/" target="_blank"><span class="moreInfo">战！</span>华尔街游行</a></li>
+                    </ul>
+                </li>
+                <li class="intro">
+                    <h3>Nov 2011</h3>
+                    <p>前端后台继续跳票，原来没有摆上日程的播放器娘倒是先更新了。说起来，神棍节AC娘也是一个人过的呢 T^T
+                    <a href="http://static.acfun.tv/ac2011/static/v5.png" target="_blank"><img src="http://static.acfun.tv/ac2011/static/v5-thumbnail.png" />第四个测试界面完成</a></p>
+                </li>
+                <li class="info">
+                	<ul class="list">
+                    	<li class="aboutAC"><a href="http://www.acfun.tv/flv/acflashplayer.html" target="_blank">新播放器公测</a></li>
+                        <li class="aboutAC"><a href="http://s.acfun.tv/h/" target="_blank"><span class="moreInfo">奇怪的地方</span>新增匿名讨论版</a></li>
+                    	<li class="aboutAC"><a href="http://tieba.baidu.com/p/1288966234" target="_blank"><span class="moreInfo">欢迎~</span>【2012AC春晚】作品招募中</a></li>
+                    	<li><a href="http://www.acfun.tv/v/ac259663/" target="_blank">AC各界共庆神棍节</a></li>
+                    </ul>
+                </li>
+                <li class="intro">
+                    <h3>Dec 2011</h3>
+                    <p>我以前也是个普通青年，直到我膝盖中……才没有中箭也不是2B青年！如果坤哥早几天登场，就可以把你美死人的COS照归到这个月里来了</p>
+                </li>
+                <li class="info">
+                	<ul class="list">
+                    	<li class="aboutAC"><a href="http://124.238.214.35/acfun/up.php?type=all" target="_blank">新增趋势板块</a></li>
+                    	<li><a href="http://www.acfun.tv/v/ac270583/" target="_blank"><span class="moreInfo">直到我膝盖中了一箭</span>本来不想收录这个</a></li>
+                        <li><a href="http://www.acfun.tv/v/ac272278/" target="_blank"><span class="moreInfo">战！</span>中国渔民误杀韩国特警</a></li>
+                        <li><a href="http://www.acfun.tv/v/ac276033/" target="_blank">爱动漫,做过声优,体重90斤(10斤是胸)的软妹征友</a></li>
+                        <li><a href="http://www.acfun.tv/v/ac278555/" target="_blank">新兵投手榴弹什么的</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    	<div id="slider"></div>
+    </div>
+    <div id="b_fix">fix
+    </div>
+</div>
+<div id="nav">
+	<a href="#b0" style="border-bottom:3px solid #eee;" id="resizeHook">年鉴</a>
+    <a href="#b1" style="border-bottom:3px solid #E68A91;">概览</a>
+    <a href="#b2" style="border-bottom:3px solid #369CF8">点击</a>
+    <a href="#b3" style="border-bottom:3px solid #1c772f">标签</a>
+    <a href="#b4" style="border-bottom:3px solid #f80;">UP主</a>
+    <a href="#b5" style="border-bottom:3px solid #890000;">时间</a>
+</div>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-24730009-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>

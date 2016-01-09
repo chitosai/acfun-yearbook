@@ -1,0 +1,38 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>AcFun年鉴 2011</title>
+<style type="text/css">\
+body{
+	background:#eee;
+	font-family:"Microsoft YaHei","Lucida Grande","Lucida Sans Unicode",Helvetica,Arial,Verdana,sans-serif;
+	width:9999px;
+	overflow:hidden;
+}
+#loading{background:url(static/overlay.png);color:#fff;text-shadow:0 0 13px #ccc;position:fixed;top:0;left:0;z-index:9999;}
+#loading h1{position:absolute;}
+</style>
+</head>
+
+<body>
+<div id="loading">
+	<h1>努力地载入页面...</h1>
+</div>
+<div id="_main_">
+</div>
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	screenWidth = $(window).width();
+	screenHeight = $(window).height();
+	$('#loading').css({'width':screenWidth,'height':screenHeight});
+	$('#loading h1').css({'left':screenWidth/2 - 130 +'px', 'top':screenHeight/2 - 50 + 'px'});
+	if($.browser.msie && $.browser.version<7)
+		$('#loading h1').html("IE6 NOT SUPPORTED");
+	else
+		$('#_main_').load('ac2011.html', function(){ $('#loading').fadeOut();});
+});
+</script>
+</body>
+</html>
