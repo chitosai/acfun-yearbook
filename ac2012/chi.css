@@ -1,0 +1,468 @@
+/* =Reset default browser CSS. Based on work by Eric Meyer: http://meyerweb.com/eric/tools/css/reset/index.html
+-------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+	border: 0;
+	font-family: "微软雅黑", "Microsoft YaHei", "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+	font-size: 12px;
+	font-style: inherit;
+	font-weight: inherit;
+	margin: 0;
+	outline: 0;
+	padding: 0;
+	vertical-align: baseline;
+}
+:focus {/* remember to define focus styles! */
+	outline: 0;
+}
+body {
+	background: #fff;
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+table {/* tables still need 'cellspacing="0"' in the markup */
+	border-collapse: separate;
+	border-spacing: 0;
+}
+caption, th, td {
+	font-weight: normal;
+	text-align: left;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: "";
+}
+blockquote, q {
+	quotes: "" "";
+}
+a img {
+	border: 0;
+}
+a,a:hover{
+	color:#000;
+	text-decoration:none;
+}
+/*= common 通用
+--------------------------------------------------------------------- */
+h3{
+	font-size: 22px;
+	line-height: 2.2;
+}
+h3 span{
+	color: #999;
+	margin-left: 5px;
+}
+h6{
+	color: #aaa;
+	font-size: 14px;
+	margin-bottom: 10px;
+}
+p{
+	color: #666;
+	font-size: 14px;
+	line-height: 1.4;
+}
+del{
+	font-size: inherit;
+	text-decoration: line-through;
+}
+.container{
+	width: 990px;
+	margin: 0 auto;
+	padding: 0 0 100px 0;
+}
+.title{
+	display: block;
+	width: 300px;
+	margin: 0 auto;
+	padding: 50px 0;
+}
+.col{
+	float: left;
+	width: 310px;
+	padding-right: 30px;
+}
+.col.last{
+	padding-right: 0;
+}
+.clearfix { zoom:1 }
+.clearfix:after { 
+  display:block; 
+  content:"";
+  clear:both;
+  height:0
+}
+
+/*= cover 封面
+--------------------------------------------------------------------- */
+#cover{
+	background: url("image/kraft-o8.jpg");
+	text-align: center;
+}
+#ac2013{
+	background: url("image/kraft.jpg");
+	border-bottom: 1px solid #916825;
+	text-align: center;
+}
+
+/*= general 概览
+---------------------------------------------------------------------- */
+#general{
+	background: #fff;
+	border-bottom: 1px solid #ddd;
+}
+#general b{
+	color: #333;
+}
+.data-img{
+	display: block;
+	margin: 20px auto 20px;
+	width: 250px;
+}
+
+/*=popularity 人气
+---------------------------------------------------------------------- */
+#popularity{
+	background: #f0f0f0;
+	border-bottom: 5px solid #444135;
+	font-size: 14px;
+}
+#popularity h3{
+	border-bottom: 1px dashed #d0d0d0;
+	margin-bottom: 10px;2
+}
+.vlist{
+	margin-bottom: 40px;
+}
+.vlist li{
+	line-height: 1.625;
+}
+.number{
+	color: #5BA0D0;
+	font-size: 12px;
+	float: left;
+}
+.link{
+	color: #333;
+	display: block;
+	font-size: 12px;
+	text-overflow: ellipsis;
+	margin-left: 20px;
+	width: 240px;
+	white-space: nowrap;
+	overflow: hidden;
+}
+.link:hover{
+	color: #f30;
+}
+.hits{
+	float: right;
+	font-size: 12px;
+	color: #999;
+}
+
+/*=up up主
+---------------------------------------------------------------------- */
+#up{
+	background: #F07057;
+}
+#up .title{
+	padding-bottom: 0;
+}
+.up{
+	box-shadow: 0 0 5px #aaa;
+	float: left;
+	display: block;
+	margin-right: 13.3px;
+	position: relative;
+	z-index: 1;
+	-webkit-transition: -webkit-box-shadow .3s ease;
+	-moz-transition: -moz-box-shadow .3s ease;
+	-ms-transition: -ms-box-shadow .3s ease;
+	-o-transition: -o-box-shadow .3s ease;
+	transition: box-shadow .3s ease;
+}
+.up.last{
+	margin-right: 0;
+}
+.up:hover{
+	background: #fff;
+	box-shadow: 0 0 20px #eee;
+	z-index: 9;
+}
+.up-basic{
+	background: #f7f7f7;
+	position: relative;
+	z-index: 99;
+}
+.up-avatar{
+	margin: 10px 10px 0;
+}
+.up-name{
+	color: #333;
+	font-weight: bold;
+	line-height: 2;
+	padding: 0 10px;
+}
+.up-score{
+	background: #f4f4f4;
+	border-top: 1px solid #eee;
+	color: #777;
+	font-size: 12px;
+	padding: 5px 10px;
+}
+.up-articles, 
+.up-hits, 
+.up-comments,
+.up-stows{
+	background: #eee;
+	color: #404040;
+	opacity: 0;
+	padding: 3px 10px;
+	position: absolute;
+	left: 0px;
+	white-space: nowrap;
+}
+.up:hover .up-articles, 
+.up:hover .up-hits, 
+.up:hover .up-comments,
+.up:hover .up-stows{
+	-webkit-transform: translate3d(130px, 0, 0);
+	-moz-transform: translate3d(130px, 0, 0);
+	-ms-transform: translate3d(130px, 0, 0);
+	-o-transform: translate3d(130px, 0, 0);
+	transform: translate3d(130px, 0, 0);
+	opacity: 1;
+	z-index: 0;
+}
+.up-articles{
+	border-right: 5px solid #444;
+	top: 10px;
+	-webkit-transition: all .2s ease;
+	-moz-transition: all .2s ease;
+	-ms-transition: all .2s ease;
+	-o-transition: all .2s ease;
+	transition: all .2s ease;
+}
+.up-hits{
+	border-right: 5px solid #666;
+	top: 35px;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+.up-comments{
+	border-right: 5px solid #888;
+	top: 60px;
+	-webkit-transition: all .4s ease;
+	-moz-transition: all .4s ease;
+	-ms-transition: all .4s ease;
+	-o-transition: all .4s ease;
+	transition: all .4s ease;
+}
+.up-stows{
+	border-right: 5px solid #aaa;
+	top: 85px;
+	-webkit-transition: all .5s ease;
+	-moz-transition: all .5s ease;
+	-ms-transition: all .5s ease;
+	-o-transition: all .5s ease;
+	transition: all .5s ease;
+}
+
+#up-list-2{
+	margin-top: 80px;
+}
+#up-list-2 li{
+	float: left;
+	padding: 8px 6px 0 0;
+}
+.up-2-name{
+	color: #fff;
+	font-size: 14px;
+	font-weight: bold;
+}
+.up-2-name:hover{
+	color: #404040;
+}
+.up-2-score{
+	color: #F0D857;
+}
+small{
+	color: #777;
+}
+
+/*=tags 标签
+---------------------------------------------------------------------- */
+#tags{
+	background: #f5f5f5;
+}
+#tags .container{
+	position: relative;
+	height: 350px;
+}
+#tags a{
+	position: absolute;
+	text-align: center;
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .2s ease;
+	-ms-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	transition: all .3s ease;
+}
+#tags a:hover{
+	color: #000 !important;
+	text-shadow: 0 0 10px #777;
+	-webkit-transform: scale3d(1.1, 1.1, 1.1);
+	-moz-transform: scale(1.1);
+	-ms-transform: scale3d(1.1, 1.1, 1.1);
+	-o-transform: scale3d(1.1, 1.1, 1.1);
+	transform: scale3d(1.1, 1.1, 1.1);
+}
+
+/*=timeline 时间线
+---------------------------------------------------------------------- */
+#time{
+	background: #5BA0D0;
+	border-top: 1px solid #1E6497;
+}
+#timeline{ 
+	position: relative; 
+	width: 900px; 
+	margin: 0 0 0 70px; 
+}
+#timeline-mask-top, #timeline-mask-bottom{
+	background: #5BA0D0;
+	width: 30px;
+	position: absolute;
+	left: 420px;
+	z-index: 9;
+}
+#timeline-mask-top{
+	top: 0;
+	height: 40px;
+}
+#timeline-mask-bottom{
+	bottom: -10px;
+	height: 135px;
+}
+.event {
+	background: #fff;
+	border-bottom: 2px solid #176194;
+	float: left;
+	width: 395px;
+	margin: 20px 10px 10px;
+}
+.inner {
+	position: relative;
+}
+.inner h2 { 
+	color: #777;
+	cursor: default;
+	font-size: 16px; 
+	font-weight: bold;
+	line-height: 1.6;
+	margin: 15px 0 0;
+	padding: 0 15px;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.inner h2 a { 
+	color: #333; 
+	font-size: 16px; 
+	text-decoration: none; 
+}
+.inner h2 a:hover {
+	color: #f30; 
+}
+.event.left .acfun{
+	border-left: 5px solid #f90;
+	text-indent: -5px;
+}
+.event.right .acfun{
+	border-right: 5px solid #f90;
+}
+.inner h6{
+	color: #999;
+	font-size: 12px;
+	line-height: 2;
+	margin: 0 15px 7px;
+}
+.inner p{
+	background: #f4f4f4;
+	border-top: 1px solid #e3e3e3;
+	color: #555;
+	padding: 15px;
+}
+.inner .snap{
+	width: 395px;
+	height: 80px;
+}
+.timeline_container { 
+	display: block; 
+	width: 5px; 
+	height: 100%; 
+	margin: 0 auto;
+	text-align: center; 
+}
+.timeline{ 
+	background-color: #176194;
+	border-radius: 10px;
+	display: block;  
+	font-size: 0; 
+	float: left; 
+	width: 4px; 
+	height: 100%; 
+	margin: 0 auto; 
+	overflow: hidden;
+	position: absolute; 
+	left: 428px; 
+	top: 10px; 
+}
+.leftCorner, 
+.rightCorner { 
+	display: block; 
+	width: 35px; 
+	height: 18px; 
+	overflow: hidden; 
+	position: absolute; 
+	top: 20px; 
+	z-index: 2; 
+}
+.rightCorner { 
+	background-image:url(image/right.png);
+	right:-34px; 
+}
+.leftCorner { 
+	background-image:url(image/left.png);
+	left:-34px; 
+}
+
+/*=about 关于
+-------------------------------------------------------------------------- */
+#about{
+	background: #111;
+	/* border-top: 1px solid #FFFF24; */
+	color: #ccc;
+}
+#about .container{
+	padding-bottom: 0;
+}
+#about blockquote{
+	font-size: 14px;
+	padding: 20px 0;
+	line-height: 1.625;
+	text-shadow: 1px 1px 5px #000;
+	text-indent: 2em;
+}
